@@ -4,10 +4,10 @@
 
 ## 🧭 Overview | 概要
 This project is an **automation tool for booking driving license updates and written exams**  
-through the [Kyoto Police Internet reservation system](https://unmen-yoyaku.police.pref.kyoto.lg.jp/menkyo-yoyaku/main](https://unmen-yoyaku.police.pref.kyoto.lg.jp/menkyo-yoyaku/main).  
+through the [Kyoto Police Internet reservation system](https://unmen-yoyaku.police.pref.kyoto.lg.jp/menkyo-yoyaku/main).  
 It automatically fills in user information, searches available time slots, and can confirm reservations automatically.
 
-本プロジェクトは、[京都府警察運転免許予約サイト](https://unmen-yoyaku.police.pref.kyoto.lg.jp/menkyo-yoyaku/main](https://unmen-yoyaku.police.pref.kyoto.lg.jp/menkyo-yoyaku/main)  
+本プロジェクトは、[京都府警察運転免許予約サイト](https://unmen-yoyaku.police.pref.kyoto.lg.jp/menkyo-yoyaku/main)  
 を対象とした **免許更新・学科試験のインターネット自動予約ツール** です。  
 個人情報の自動入力、空き枠の探索、予約確定までを自動化します。
 
