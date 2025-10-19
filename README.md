@@ -1,5 +1,6 @@
-# Kyoto License Exam Auto Booking Tool  
-（京都府運転免許試験・学科試験 自動予約スクリプト）
+# 京都府運転免許更新・学科試験 自動予約スクリプト
+# Kyoto Driving License Test Auto Booking Script  
+
 
 ## 🧭 Overview | 概要
 This project is an **automation tool for booking driving license updates and written exams**  
