@@ -16,14 +16,14 @@ FLOW_CONFIG = {
     "step3_place_button": "運転免許試験場",
 }
 USER_CONFIG = {
-    "kana": "ヤマダタロウ", # 例：ヤマダタロウ
-    "confirm_code6": "123456", # 例：123456　6桁の予約番号
+    "kana": "シュウイチハン", # 例：ヤマダタロウ
+    "confirm_code6": "123456", # 例：123456　6桁の本人確認番号（学科試験の方は、任意の数字（６桁）を入力してください。本人確認や予約変更等で必要になります。忘れないようお願いします。「誕生月日」「連続した数字」「同一数字」などはおやめください。）
     "birth_year": "2001", # 例：2001
     "birth_month": "7", # 例：7
     "birth_day": "16", # 例：16
     "email": "adaisuke716@gmail.com",
 }
-
+SEARCH_DAYS = 32  # search within the next N days
 # debug
 CHECK_INTERVAL_SEC = 60
 AUTO_SUBMIT = True  # auto submit on step 6
@@ -386,7 +386,7 @@ async def find_and_book_within_next_30_days(page: Page):
         return None
 
     start_d: date = date.today()
-    end_d:   date = start_d + timedelta(days=32)
+    end_d:   date = start_d + timedelta(days=SEARCH_DAYS)
     num_re = re.compile(r"^\s*\d{1,2}\s*$")
 
     while True:
@@ -667,7 +667,7 @@ async def main():
                 return
 
             now = datetime.now().strftime("%H:%M:%S")
-            print(f"[{now}] No availability within 30 days. Retrying in {CHECK_INTERVAL_SEC}s…")
+            print(f"[{now}] No availability within {SEARCH_DAYS} days. Retrying in {CHECK_INTERVAL_SEC}s…")
             await asyncio.sleep(CHECK_INTERVAL_SEC)
             await page.reload(); await wait_idle(page)
 
